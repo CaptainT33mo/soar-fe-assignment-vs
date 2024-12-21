@@ -21,7 +21,6 @@ export const TransactionList = ({
 }: {
   transactions: Transaction[];
 }) => {
-  console.log(transactions);
   return (
     <ScrollArea
       scrollBarClassName="[&>div]:bg-black/10"
