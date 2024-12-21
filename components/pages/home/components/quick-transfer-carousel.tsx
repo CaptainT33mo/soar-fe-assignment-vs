@@ -8,8 +8,6 @@ import {
   CarouselItem,
   CarouselNext,
 } from "@/components/ui/carousel";
-import CarouselNextIcon from "./icons/carousel-next.svg";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Person } from "@/types";
 
