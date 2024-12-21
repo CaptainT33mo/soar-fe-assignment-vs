@@ -37,7 +37,7 @@ export default function GlobalSidebar ({
       <Sidebar className="hidden md:flex">
         <SidebarHeader className="h-header justify-center items-center">
           <Link href="/" className="flex gap-2.5 items-center">
-            <LogoIcon className="text-primary" />
+            <LogoIcon className="text-primary" width={35} height={35} />
             <h1 className="text-[25px] font-extrabold text-text-title">
               Soar Task
             </h1>

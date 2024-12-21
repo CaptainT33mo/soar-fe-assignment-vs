@@ -14,31 +14,32 @@ import LoansIcon from "@/components/icons/sidebar/loans";
 import ServicesIcon from "@/components/icons/sidebar/services";
 import PrivilagesIcon from "@/components/icons/sidebar/privilages";
 import SettingsIcon from "@/components/icons/sidebar/settings";
+import Header from "@/components/header";
 
 
 
 const sidebarItems = [
-  { title: "Dashboard", href: "/", icon: <HomeIcon /> },
+  { title: "Dashboard", href: "/", icon: <HomeIcon width={25} height={25} /> },
   {
     title: "Transactions",
     href: "/transactions",
-    icon: <TransactionIcon />,
+    icon: <TransactionIcon width={25} height={25} />,
   },
-  { title: "Accounts", href: "/accounts", icon: <AccountsIcon /> },
-  { title: "Investments", href: "/investments", icon: <InvestmentIcon /> },
+  { title: "Accounts", href: "/accounts", icon: <AccountsIcon width={25} height={25} /> },
+  { title: "Investments", href: "/investments", icon: <InvestmentIcon width={25} height={25} /> },
   {
     title: "Credit Cards",
     href: "/credit-cards",
-    icon: <CreditCardIcon />,
+    icon: <CreditCardIcon width={25} height={25} />,
   },
-  { title: "Loans", href: "/loans", icon: <LoansIcon /> },
-  { title: "Services", href: "/services", icon: <ServicesIcon /> },
+  { title: "Loans", href: "/loans", icon: <LoansIcon width={25} height={25} /> },
+  { title: "Services", href: "/services", icon: <ServicesIcon width={25} height={25} /> },
   {
     title: "My Privileges",
     href: "/my-privileges",
-    icon: <PrivilagesIcon />,
+    icon: <PrivilagesIcon width={25} height={25} />,
   },
-  { title: "Settings", href: "/settings", icon: <SettingsIcon /> },
+  { title: "Settings", href: "/settings", icon: <SettingsIcon width={25} height={25} /> },
 ];
 
 const queryClient = new QueryClient();
@@ -48,7 +49,9 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     <QueryClientProvider client={queryClient}>
       <SidebarProvider>
         <GlobalSidebar items={sidebarItems} />
-        <main className="flex-1 bg-white md:bg-background">{children}</main>
+        <main className="flex-1 bg-white md:bg-background">
+          <Header title="" />
+          {children}</main>
       </SidebarProvider>
     </QueryClientProvider>
   );
